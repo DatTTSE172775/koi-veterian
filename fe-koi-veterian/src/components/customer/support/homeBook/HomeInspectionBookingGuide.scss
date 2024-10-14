@@ -1,0 +1,28 @@
+.supportPage-booking-guide {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  .supportPage-booking-steps {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+
+    li {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #666;
+      line-height: 1.6;
+
+      strong {
+        color: #333;
+      }
+    }
+  }
+}
