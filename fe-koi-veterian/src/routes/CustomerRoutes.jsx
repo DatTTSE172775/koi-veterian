@@ -10,7 +10,6 @@ const CustomerRoutes = () => {
   return (
     <Routes>
       <Route element={<CustomerLayout />}>
-        s
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />

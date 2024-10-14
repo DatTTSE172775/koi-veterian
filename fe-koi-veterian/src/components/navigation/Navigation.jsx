@@ -1,32 +1,61 @@
-import {
-  HomeOutlined,
-  InfoCircleOutlined,
-  MedicineBoxOutlined,
-  PhoneOutlined,
-  QuestionCircleOutlined,
-} from "@ant-design/icons";
-import { Menu } from "antd";
-import { Link } from "react-router-dom";
+import { Button, Menu } from "antd";
+import { Link, useLocation } from "react-router-dom";
+import "./Navigation.scss";
 
 const Navigation = () => {
+  const location = useLocation(); // Lấy đường dẫn hiện tại
+  const selectedKey = location.pathname; // Lấy pathname hiện tại để làm key cho menu
+
   return (
-    <Menu mode="horizontal" theme="dark">
-      <Menu.Item key="home" icon={<HomeOutlined />}>
-        <Link to="/">Trang chủ</Link>
-      </Menu.Item>
-      <Menu.Item key="about" icon={<InfoCircleOutlined />}>
-        <Link to="/about">Giới thiệu</Link>
-      </Menu.Item>
-      <Menu.Item key="services" icon={<MedicineBoxOutlined />}>
-        <Link to="/services">Dịch vụ</Link>
-      </Menu.Item>
-      <Menu.Item key="faq" icon={<QuestionCircleOutlined />}>
-        <Link to="/faq">Câu hỏi thường gặp</Link>
-      </Menu.Item>
-      <Menu.Item key="contact" icon={<PhoneOutlined />}>
-        <Link to="/contact">Liên hệ</Link>
-      </Menu.Item>
-    </Menu>
+    <div className="navigation">
+      {/* Logo */}
+      <div className="logo">
+        <img
+          src="/vite.svg"
+          alt="Koi Veterinary Center"
+          style={{ height: "40px" }}
+        />
+      </div>
+
+      {/* Menu */}
+      <Menu mode="horizontal" selectedKeys={[selectedKey]} className="menu">
+        <Menu.Item key="/">
+          <Link to="/">Trang chủ</Link>
+        </Menu.Item>
+        <Menu.Item key="/about">
+          <Link to="/about">Giới thiệu</Link>
+        </Menu.Item>
+        <Menu.Item key="/services">
+          <Link to="/services">Dịch vụ</Link>
+        </Menu.Item>
+
+        <Menu.SubMenu key="/services/appointment" title="Đặt lịch hẹn">
+          <Menu.Item key="/services/online-consultation">
+            <Link to="/services/online-consultation">Tư vấn trực tuyến</Link>
+          </Menu.Item>
+          <Menu.Item key="/services/home-consultation">
+            <Link to="/services/home-consultation">Kiểm tra tại nhà</Link>
+          </Menu.Item>
+          <Menu.Item key="/services/disease-treatment">
+            <Link to="/services/disease-treatment">Điều trị bệnh</Link>
+          </Menu.Item>
+        </Menu.SubMenu>
+
+        <Menu.Item key="/support">
+          <Link to="/support">Hỗ trợ</Link>
+        </Menu.Item>
+      </Menu>
+
+      {/* Nút Đăng ký và Đăng nhập */}
+      <div className="auth-buttons">
+        <Button type="default" className="register-btn">
+          <Link to="/register">Đăng ký</Link>
+        </Button>
+        <Button type="primary" className="login-btn">
+          <Link to="/login">Đăng nhập</Link>
+        </Button>
+      </div>
+    </div>
   );
 };
 
