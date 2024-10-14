@@ -1,0 +1,26 @@
+.faq-section {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .ant-collapse {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .ant-collapse-header {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .ant-collapse-content {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+}

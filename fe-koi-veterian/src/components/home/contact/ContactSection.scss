@@ -1,0 +1,46 @@
+.contact-section {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .contact-info {
+    text-align: left;
+    margin-bottom: 40px;
+
+    .info-item {
+      h3 {
+        font-size: 1.3rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+      }
+    }
+  }
+
+  .contact-form {
+    .ant-form-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-map {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .ant-btn-primary {
+    background-color: #52c41a;
+    border-color: #52c41a;
+  }
+}

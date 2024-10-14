@@ -9,8 +9,15 @@ const CustomerLayout = () => {
   return (
     <Layout>
       <Navigation />
-      <Content style={{ padding: "0 50px", marginTop: 64 }}>
-        <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
+      <Content
+        style={{
+          padding: "5px",
+          maxWidth: "1475px",
+          margin: "0px auto",
+          backgroundColor: "#fff",
+        }}
+      >
+        <div>
           <Outlet />
         </div>
       </Content>

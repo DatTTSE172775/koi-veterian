@@ -1,0 +1,21 @@
+.servicePage-faq-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+
+  .servicePage-faq-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .ant-collapse-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .ant-collapse-content p {
+    font-size: 1rem;
+    color: #555;
+  }
+}

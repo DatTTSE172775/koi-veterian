@@ -1,0 +1,56 @@
+.aboutPage-summary-services-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+
+  .aboutPage-summary-services-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .aboutPage-summary-services-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .aboutPage-summary-service-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      border-radius: 8px 8px 0 0;
+      object-fit: cover;
+    }
+
+    .ant-card-meta-title {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .ant-card-meta-description {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .aboutPage-summary-service-button {
+      background-color: #52c41a;
+      border-color: #52c41a;
+
+      &:hover {
+        background-color: #46a512;
+        border-color: #46a512;
+      }
+    }
+  }
+}

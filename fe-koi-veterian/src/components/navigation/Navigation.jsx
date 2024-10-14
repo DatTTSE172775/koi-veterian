@@ -71,6 +71,9 @@ const Navigation = () => {
           </Menu.Item>
         </Menu.SubMenu>
 
+        <Menu.Item key="/veterianOverview">
+          <Link to="/veterianOverview">Bác sĩ</Link>
+        </Menu.Item>
         <Menu.Item key="/support">
           <Link to="/support">Hỗ trợ</Link>
         </Menu.Item>

@@ -1,0 +1,22 @@
+.aboutPage-gallery-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .aboutPage-gallery-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .aboutPage-gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  video {
+    max-height: 300px;
+  }
+}

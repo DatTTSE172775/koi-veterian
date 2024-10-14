@@ -1,0 +1,43 @@
+.servicePage-detail-section {
+  padding: 60px 20px;
+  background-color: #fff;
+
+  .servicePage-detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .servicePage-detail-content {
+      flex: 1;
+      padding: 20px;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+    }
+
+    .servicePage-detail-image {
+      flex: 1;
+      padding: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.aboutPage-hero-section {
+  background-image: url("https://via.placeholder.com/1920x600"); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  .aboutPage-hero-section-content {
+    /* Class name riêng biệt */
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+    padding: 20px 40px;
+    border-radius: 8px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+}
