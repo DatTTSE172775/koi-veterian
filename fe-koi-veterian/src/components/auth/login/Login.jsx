@@ -1,6 +1,7 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input, message } from "antd";
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../../store/authSlide";
@@ -12,9 +13,11 @@ const Login = ({ onSuccess, onError }) => {
   const { loading, authenticated } = useSelector((state) => state.auth);
 
   // Nếu người dùng đã đăng nhập, điều hướng về trang chính
-  if (authenticated) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (authenticated) {
+      navigate("/"); // Điều hướng khi người dùng đã đăng nhập
+    }
+  }, [authenticated, navigate]);
 
   // Xử lý khi form được submit
   const onFinish = async (values) => {
@@ -30,8 +33,12 @@ const Login = ({ onSuccess, onError }) => {
       // Khi đăng nhập thành công, gọi hàm onSuccess và hiển thị notification qua LoginPage
       onSuccess();
     } catch (error) {
+      console.error("Login error:", error);
       // Khi đăng nhập thất bại, gọi hàm onError và hiển thị thông báo lỗi
       onError(error.message || "Login failed!");
+      message.error(
+        error.message || "Tên đăng nhập hoặc mật khẩu không hợp lệ!"
+      );
     }
   };
 

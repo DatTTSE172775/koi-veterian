@@ -1,0 +1,30 @@
+.treatmentBookingPage-faq {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+  }
+
+  .ant-collapse {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .ant-collapse-item {
+      margin-bottom: 10px;
+
+      .ant-collapse-header {
+        font-size: 1.3rem;
+        color: #1890ff;
+      }
+
+      .ant-collapse-content {
+        font-size: 1.2rem;
+        color: #555;
+      }
+    }
+  }
+}

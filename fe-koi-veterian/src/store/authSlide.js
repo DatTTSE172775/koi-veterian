@@ -3,13 +3,13 @@ import { forgetPassword, login, register } from "../services/authService";
 
 // Async Thunks for calling the API
 export const loginUser = createAsyncThunk(
-  "auth/login",
+  "/auth/login",
   async (credentials, thunkAPI) => {
     try {
       const response = await login(credentials);
       return response;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error?.response?.data || "Đã xảy ra lỗi");
     }
   }
 );

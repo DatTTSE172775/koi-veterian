@@ -1,0 +1,44 @@
+.treatmentBookingPage-testimonials {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .treatmentBookingPage-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+    .treatmentBookingPage-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px auto;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      color: #1890ff;
+    }
+  }
+}

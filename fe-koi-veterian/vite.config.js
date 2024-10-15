@@ -9,7 +9,6 @@ export default defineConfig({
       "/auth": {
         target: "http://103.185.184.35:8080",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/auth/, ""),
       },
     },
   },
