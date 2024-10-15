@@ -12,11 +12,11 @@
 
   .logo {
     img {
-      height: 45px; /* Điều chỉnh chiều cao logo */
-      transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+      height: 45px;
+      transition: transform 0.3s ease;
 
       &:hover {
-        transform: scale(1.1); /* Khi hover, logo lớn hơn 1 chút */
+        transform: scale(1.1);
       }
     }
   }
@@ -24,28 +24,28 @@
   .menu {
     flex: 1;
     display: flex;
-    justify-content: center; /* Căn giữa các mục menu */
-    background: none; /* Bỏ nền */
-    border-bottom: none; /* Bỏ đường viền mặc định */
+    justify-content: center;
+    background: none;
+    border-bottom: none;
 
     .ant-menu-item,
     .ant-menu-submenu-title {
-      font-size: 16px; /* Cỡ chữ lớn hơn một chút */
-      font-weight: 500; /* Tăng độ đậm cho font */
+      font-size: 16px;
+      font-weight: 500;
       padding: 0 20px;
       transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
-        color: #1890ff; /* Thay đổi màu khi hover */
-        transform: translateY(-3px); /* Hiệu ứng nổi lên khi hover */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+        color: #1890ff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
     }
 
     .ant-menu-item-selected {
       color: #1890ff !important;
-      transform: none; /* Không cần hiệu ứng nổi cho mục được chọn */
-      box-shadow: none; /* Không cần đổ bóng cho mục được chọn */
+      transform: none;
+      box-shadow: none;
     }
   }
 
@@ -56,9 +56,9 @@
     .register-btn,
     .login-btn {
       font-weight: 500;
-      border-radius: 20px; /* Bo góc cho các nút */
-      padding: 5px 20px; /* Tăng kích thước padding để nút lớn hơn */
-      transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng hover */
+      border-radius: 20px;
+      padding: 5px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .register-btn {
@@ -80,6 +80,29 @@
 
       &:hover {
         background-color: #40a9ff;
+      }
+    }
+
+    .logged-in-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .notification-icon {
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      .user-profile {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .username {
+          margin-left: 10px;
+          font-weight: 500;
+          color: #333;
+        }
       }
     }
   }

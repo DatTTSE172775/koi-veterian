@@ -1,10 +1,28 @@
 import { Button, DatePicker, Form, Input, notification, Select } from "antd";
+import { useEffect } from "react";
 import "./BookingForm.scss";
 
 const { Option } = Select;
 
 const BookingForm = () => {
   const [form] = Form.useForm();
+
+  // Giả lập thông tin khách hàng đã đăng nhập
+  const loggedInUser = {
+    username: "nguyenvana",
+    fullname: "Nguyễn Văn A",
+    phone: "0123456789",
+    email: "nguyenvana@example.com",
+  };
+
+  useEffect(() => {
+    // Điền sẵn thông tin vào form khi người dùng đã đăng nhập
+    form.setFieldsValue({
+      username: loggedInUser.username,
+      fullname: loggedInUser.fullname,
+      phone: loggedInUser.phone,
+    });
+  });
 
   const onFinish = (values) => {
     // Giả lập việc gửi dữ liệu form đến API
@@ -31,7 +49,7 @@ const BookingForm = () => {
           label="Tên đăng nhập"
           rules={[{ required: true, message: "Vui lòng nhập tên đăng nhập!" }]}
         >
-          <Input placeholder="Nhập tên đăng nhập" />
+          <Input disabled />
         </Form.Item>
 
         <Form.Item
